@@ -41,7 +41,6 @@ def report_replacer(self, report):
         parents = [file_name]
 
     text = text[-1]
-    # print('\nnode_id: ' + report.nodeid + '\norig_text: ' + orig_text + '\ntext: ' + text + '\nparents: ' + str(parents))
 
     indent = '    '
     test_indent = indent

@@ -92,7 +92,7 @@ def load_test_info(nodeid):
     else:
         func_name = data[1]
 
-    module_name = file_name.replace('.py', '').replace('/', '.')
+    module_name = file_name.replace('.py', '').replace('/', '.').replace('\\', '.')
     load_module(module_name)
     class_text = load_class(module_name, class_name)
     func_text = load_func(module_name, class_name, func_name)
