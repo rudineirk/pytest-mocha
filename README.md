@@ -2,6 +2,8 @@
 
 Pytest output in [MochaJS](http://mochajs.org) format
 
+![pytest-mocha](https://cloud.githubusercontent.com/assets/5260987/26183565/eaa21f8e-3b55-11e7-8c9e-bdf1613d3903.png)
+
 It uses docstrigs as a tool to create the sections that mocha creates using the `describe` and `it` structure. Example:
 
 ```python
