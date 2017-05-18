@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from .reporter import logstart_replacer, report_replacer
 
 

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from colorama import Fore, Style
 
 from .loader import load_test_info
@@ -36,7 +37,7 @@ def report_replacer(self, report):
     text = [x.strip() for x in text.split('::')]
     parents = []
     if len(text) >= 1:
-        parents = [*parents, *text[:-1]]
+        parents.extend(text[:-1])
     if not parents:
         parents = [file_name]
 
