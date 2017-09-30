@@ -9,12 +9,18 @@ STORAGE = {
 STATUS_ICONS = {
     'passed': '✓',
     'failed': '✖',
-    'skipped': '!'
+    'skipped': '!',
+    'error': 'E',
+    'xfailed': '✖',
+    'xpassed': '✓',
 }
 COLORS = {
     'passed': Fore.GREEN,
     'failed': Fore.RED,
-    'skipped': Fore.YELLOW
+    'skipped': Fore.YELLOW,
+    'error': Fore.RED,
+    'xfailed': Fore.YELLOW,
+    'xpassed': Fore.YELLOW,
 }
 
 
