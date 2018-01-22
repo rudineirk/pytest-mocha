@@ -72,6 +72,7 @@ def report_replacer(self, report):
         if key not in tmp_keys:
             STORAGE['parents'].pop(key)
 
+    category = category.strip()
     self._tw.line()
     self._tw.write("{color}{indent}{icon} {text}{reset}".format(
         color=COLORS[category],
