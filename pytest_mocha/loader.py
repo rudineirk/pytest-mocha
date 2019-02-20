@@ -2,9 +2,12 @@
 import re
 from importlib import import_module
 
+import pytest
+
 MODULE_CACHE = {}
 CLASS_CACHE = {}
 FUNC_CACHE = {}
+PYTEST_MAJOR_VERSION = int(pytest.__version__.split('.')[0])
 
 
 def load_module(module_name):
@@ -89,12 +92,17 @@ def load_test_info(nodeid):
     func_name = ''
     arg_text = ''
     func_text = []
-    if len(data) > 2:
+    if len(data) > 3 and PYTEST_MAJOR_VERSION <= 2:
+        # test classes without TestCase as base on pytest 2.x
         class_name = data[1]
-        func_text = data[2].split('[')
+        func_text = data[3]
+    elif len(data) > 2:
+        class_name = data[1]
+        func_text = data[2]
     else:
-        func_text = data[1].split('[')
+        func_text = data[1]
 
+    func_text = func_text.split('[')
     func_name = func_text[0]
     if len(func_text) > 1:
         arg_text = '[' + func_text[1]
