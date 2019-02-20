@@ -6,7 +6,7 @@ with open('README.md') as f:
 
 setup(
     name='pytest-mocha',
-    version='0.2.1',
+    version='0.3.0',
     description='pytest plugin to display test execution output like a mochajs',
     long_description=long_description,
     author='Rudinei Goi Roecker',
