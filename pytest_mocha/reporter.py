@@ -32,7 +32,7 @@ def logstart_replacer(self, nodeid, location):
 
 
 def report_replacer(self, report):
-    res = self.config.hook.pytest_report_teststatus(report=report)
+    res = self.config.hook.pytest_report_teststatus(report=report, config=self.config)
     category, letter, word = res
     self.stats.setdefault(category, []).append(report)
     if not letter and not word:
