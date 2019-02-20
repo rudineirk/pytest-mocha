@@ -87,11 +87,17 @@ def load_test_info(nodeid):
     file_name = data[0]
     class_name = ''
     func_name = ''
+    arg_text = ''
+    func_text = []
     if len(data) > 2:
         class_name = data[1]
-        func_name = data[2]
+        func_text = data[2].split('[')
     else:
-        func_name = data[1]
+        func_text = data[1].split('[')
+
+    func_name = func_text[0]
+    if len(func_text) > 1:
+        arg_text = '[' + func_text[1]
 
     module_name = file_name.replace('.py', '').replace('/', '.').replace('\\', '.')
     load_module(module_name)
@@ -102,4 +108,5 @@ def load_test_info(nodeid):
     if class_text:
         text = class_text + ' :: ' + text
 
+    text = text + arg_text
     return file_name, text
