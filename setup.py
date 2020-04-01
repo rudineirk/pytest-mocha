@@ -6,7 +6,7 @@ with open('README.md') as f:
 
 setup(
     name='pytest-mocha',
-    version='0.3.0',
+    version='0.4.0',
     description='pytest plugin to display test execution output like a mochajs',
     long_description=long_description,
     author='Rudinei Goi Roecker',
@@ -16,6 +16,7 @@ setup(
     packages=['pytest_mocha'],
     install_requires=[
         'colorama>=0.3.9',
+        "pytest >= 5.4.0",
     ],
     entry_points={
         'pytest11': ['pytest_mocha = pytest_mocha.plugin']
@@ -26,12 +27,12 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Software Development :: Testing',
         'Topic :: Software Development :: Libraries',
         'Topic :: Utilities',

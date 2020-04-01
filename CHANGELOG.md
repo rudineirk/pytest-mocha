@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.4.0
+
+* Drop support for python 2
+* Fix warning with pytest>=5.4.0 (imp module)
+
 ## v0.3.0
 
 * Add support for test arguments
