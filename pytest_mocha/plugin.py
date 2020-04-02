@@ -20,10 +20,10 @@ def pytest_addoption(parser):
 
 def pytest_configure(config):
     if config.option.mocha and not config.option.mocha_disable:
-        import imp
+        import importlib
         import _pytest
         _pytest.terminal.TerminalReporter \
             .pytest_runtest_logstart = logstart_replacer
         _pytest.terminal.TerminalReporter \
             .pytest_runtest_logreport = report_replacer
-        imp.reload(_pytest)
+        importlib.reload(_pytest)
