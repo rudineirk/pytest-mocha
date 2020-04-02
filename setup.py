@@ -9,6 +9,7 @@ setup(
     version='0.4.0',
     description='pytest plugin to display test execution output like a mochajs',
     long_description=long_description,
+    long_description_content_type="text/markdown",
     author='Rudinei Goi Roecker',
     author_email='rudinei.roecker@gmail.com',
     url='https://github.com/rudineirk/pytest-mocha',
